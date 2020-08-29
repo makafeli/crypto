@@ -1,0 +1,39 @@
+{
+  "name": "centric",
+  "version": "1.0.0",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "private-network": "ganache-cli --time 1970-01-01T00:00:00Z",
+    "test": "truffle test",
+    "coverage": "truffle run coverage",
+    "compile": "truffle compile",
+    "validate-tests": "eslint test/*.js test/helpers/*.js --fix",
+    "validate-sol": "solium --dir contracts --fix",
+    "format": "prettier --write **/*.js & prettier --write **/*.sol"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bignumber.js": "^9.0.0",
+    "dotenv": "^8.1.0",
+    "eslint-config-google": "^0.14.0",
+    "ganache-cli": "^6.7.0",
+    "truffle": "^5.1.14",
+    "truffle-assertions": "^0.9.2",
+    "truffle-flattener": "^1.4.2",
+    "truffle-hdwallet-provider": "^1.0.17",
+    "web3": "1.2.4"
+  },
+  "devDependencies": {
+    "@openzeppelin/test-helpers": "^0.5.5",
+    "eslint": "^6.5.1",
+    "ethlint": "^1.2.5",
+    "prettier": "^1.19.1",
+    "prettier-plugin-solidity": "^1.0.0-alpha.44",
+    "solidity-coverage": "^0.7.1"
+  }
+}
